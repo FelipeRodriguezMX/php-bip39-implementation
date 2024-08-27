@@ -1,0 +1,29 @@
+x-defaults:
+  network: &network
+    networks:
+      - net
+
+services:
+  proyecto: 
+    container_name: 'authentication-bip39'
+    working_dir: '/var/www/proyecto/'
+    image: lamp
+    ports:
+      - 80:80
+    volumes:
+      - .:/var/www/proyecto/
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+
+networks:
+  net:
+
+configs:
+  apache-vhosts:
+    file: ./apache/vhosts.conf
+  php-ini:
+    file: ./php/local.ini
+ 
+volumes:
+  workspace:
+    external: true

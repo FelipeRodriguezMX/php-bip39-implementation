@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Router Lib
+RewriteRule ^([a-zA-Z0-9\/+]+)$  index.php?path=$1 [L,NC]
+

@@ -1,0 +1,5 @@
+{
+    "require": {
+        "furqansiddiqui/bip39-mnemonic-php": "^0.1.7"
+    }
+}
